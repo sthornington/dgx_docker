@@ -1,7 +1,6 @@
 jupyterlab>3.0
 #duckduckgo_search
 ddgs
-fastai
 fastkaggle
 gradio
 graphviz
@@ -13,10 +12,6 @@ plotly
 seaborn
 statsmodels
 sympy
-#timm==0.6.13
-timm
-#torch
-#torchvision
 transformers==4.44.2
 datasets
 sentencepiece

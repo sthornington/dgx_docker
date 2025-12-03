@@ -7,7 +7,7 @@ RUN groupmod -n sthornington ubuntu && \
     usermod -l sthornington -d /home/sthornington -m ubuntu
 
 RUN apt-get update
-RUN apt-get install -y curl build-essential graphviz
+RUN apt-get install -y curl build-essential graphviz emacs
 
 USER sthornington
 WORKDIR /home/sthornington
@@ -19,11 +19,13 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
 
 COPY --chown=sthornington:sthornington ["requirements.txt", "/opt/project/build/"]
 
+RUN pip install --user fastai==2.8.5 --no-deps
+RUN pip install --user timm==1.0.9 --no-deps
 RUN pip install --user -r /opt/project/build/requirements.txt
 
 WORKDIR /fastai
 ENV KAGGLE_USERNAME=simonthornington \
     KAGGLE_KEY=381aa5573043d07b08d2856dbc3609ac
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--ServerApp.token=", "--ServerApp.password="]
-#CMD ["tail", "-f", "/dev/null"]
+#CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--ServerApp.token=", "--ServerApp.password="]
+CMD ["tail", "-f", "/dev/null"]
 
