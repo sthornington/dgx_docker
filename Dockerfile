@@ -26,6 +26,6 @@ RUN pip install --user -r /opt/project/build/requirements.txt
 WORKDIR /fastai
 ENV KAGGLE_USERNAME=simonthornington \
     KAGGLE_KEY=381aa5573043d07b08d2856dbc3609ac
-#CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--ServerApp.token=", "--ServerApp.password="]
-CMD ["tail", "-f", "/dev/null"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--ServerApp.token=", "--ServerApp.password="]
+#CMD ["tail", "-f", "/dev/null"]
 

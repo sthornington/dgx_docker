@@ -1,7 +1,14 @@
 jupyterlab>3.0
 #duckduckgo_search
+plum-dispatch
+cloudpickle
+fastdownload
+fastprogress
+fasttransform
+spacy
 ddgs
 fastkaggle
+plum
 gradio
 graphviz
 ipywidgets
