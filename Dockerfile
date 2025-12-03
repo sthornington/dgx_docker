@@ -20,7 +20,8 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
 COPY --chown=sthornington:sthornington ["requirements.txt", "/opt/project/build/"]
 
 RUN pip install --user fastai==2.8.5 --no-deps
-RUN pip install --user timm==1.0.9 --no-deps
+# todo can we upgrade this some time?
+RUN pip install --user timm==0.6.13 --no-deps
 RUN pip install --user -r /opt/project/build/requirements.txt
 
 WORKDIR /fastai
