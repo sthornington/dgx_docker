@@ -8,7 +8,6 @@ fasttransform
 spacy
 ddgs
 fastkaggle
-plum
 gradio
 graphviz
 ipywidgets
